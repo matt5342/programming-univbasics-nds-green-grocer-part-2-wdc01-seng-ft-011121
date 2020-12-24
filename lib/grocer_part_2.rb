@@ -54,14 +54,14 @@ def checkout(cart, coupons)
   cart.each do |item_hash|
    
     total += item_hash[:price] * item_hash[:count]
-    total.round(2)
+    # total.round(2)
     # binding.pry
   end
   if total > 100
     total = total * 0.9
-    total.round(2)
+    # total.round(2)
   end
-  total.round(2)
+  # total.round(2)
   # binding.pry
   total
 end
