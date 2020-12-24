@@ -61,7 +61,7 @@ def checkout(cart, coupons)
     total = total * 0.9
     total.round(2)
   end
-  total.round(1)
+  total.round(2)
   # binding.pry
   total
 end
