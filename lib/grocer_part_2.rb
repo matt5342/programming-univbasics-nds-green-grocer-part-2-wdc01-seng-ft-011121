@@ -14,7 +14,7 @@ def apply_coupons(cart, coupons)
       coupon_num = hash[:num]
       coupon_cost = hash[:cost]
       price_each = coupon_cost / coupon_num
-    if item_hash[:item] == item_coupon
+    if item_hash[:item] == item_coupon && item_hash[:count] >= hash[:num]
       item_hash[:count] = item_hash[:count] - coupon_num
       cart << {item: item_name, price: price_each.round(2),                 
                 clearance: item_hash[:clearance], count: coupon_num}
