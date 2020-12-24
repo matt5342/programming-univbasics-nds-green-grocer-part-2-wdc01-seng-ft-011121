@@ -47,9 +47,9 @@ def checkout(cart, coupons)
   #
   # BEFORE it begins the work of calculating the total (or else you might have
   # some irritated customers
-  cart = consolidate_cart(cart)
-  cart = apply_coupons(cart, coupons)
-  cart =apply_clearance(cart)
+  cart1 = consolidate_cart(cart)
+  cart2 = apply_coupons(cart1, coupons)
+  cart =apply_clearance(cart2)
   total = 0.0
   cart.each do |item_hash|
    
